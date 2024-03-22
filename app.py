@@ -52,6 +52,12 @@ def answer():
         return(render_template("wrong.html"))
     else:
         return(render_template("correct.html"))
+        
+@app.route("/food_exp",methods=["GET","POST"])
+def foodexpenditure():
+    return(render_template("food_exp.html",r=r))
+
+
 
 @app.route("/end",methods=["GET","POST"])
 def end():  
