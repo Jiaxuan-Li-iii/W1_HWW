@@ -54,9 +54,13 @@ def answer():
         return(render_template("correct.html"))
         
 @app.route("/food_exp",methods=["GET","POST"])
-def foodexpenditure():
+def food_exp():
     return(render_template("food_exp.html",r=r))
-
+       
+@app.route("/prediction",methods=["GET","POST"])
+def prediction():
+    income = float(request.form.get("income"))
+    return(render_template("prediction.html",r=(income *0.485)+147))
 
 
 @app.route("/end",methods=["GET","POST"])
