@@ -48,7 +48,7 @@ def query():
 def delete():
     conn = sqlite3.connect("log.db")
     c = conn.cursor()
-    c.execute("drop from employee;")
+    c.execute("delete from employee;")
     conn.commit()
     c.close()
     conn.close()
