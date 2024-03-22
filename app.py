@@ -44,6 +44,16 @@ def query():
     conn.close()
     return(render_template("query.html",r=r))
 
+@app.route("/delete",methods=["GET","POST"])
+def delete():
+    conn = sqlite3.connect("log.db")
+    c = conn.cursor()
+    c.execute("drop from employee;")
+    conn.commit()
+    c.close()
+    conn.close()
+    return(render_template("delete.html"))
+
 @app.route("/answer",methods=["GET","POST"])
 def answer():
     ans = request.form["options"]
