@@ -77,7 +77,7 @@ def prediction():
     
 @app.route("/music",methods=["GET","POST"])
 def music():
-    return(render_template("music.html")
+    return(render_template("music.html"))
        
 @app.route("/music_generator",methods=["GET","POST"])
 def music_generator():
