@@ -6,7 +6,8 @@
 </style>
 
 <div class="container">
-    <h1>You should spend {{r}} on your food per week.</h1>
+    <h4>Music Link: {{r}}</h4>
+    <audio controls><source src={{r}} type = "audio/wav"></audio>
     <form action="/main" method="post">
         <p><input type="submit" value="Main"></p>
     </form>
